@@ -1,4 +1,4 @@
-# UPS_Igate
+# UPS_IGate
 
 
 This Program will calculate the volume, sort and load (SL) Hours and AM Hours for each Center in Maple Grove, Minnesota.
