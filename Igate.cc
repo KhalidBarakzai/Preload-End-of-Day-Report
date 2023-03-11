@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 class Maple_Grove_Center 
@@ -28,23 +29,35 @@ int main()
     Maple_Grove_Center Lake_Shore;
     Maple_Grove_Center Three_Rivers;
     printf("\n");
-    printf("PRELOAD -> PRELOAD SUMMARY REPORT\n");
+    printf("          END OF DAY REPORT          \n");
     printf("-------------------------------------\n");
+    //Given from Enterprise Scan Reports
+    printf("\n");
+    //printf("IGATE -> ENTERPRISE SCAN REPORTS:\n");
+    //printf("-------------------------------------\n");
+    
+    // current date and time on the current system
+    time_t now = time(0);
+
+    // convert now to string form
+    char* date_time = ctime(&now);
+
+    cout << date_time << endl;
+
+    double SPA_Volume;
+    cout << "SPA Volume: ";
+    cin >> SPA_Volume;
+    printf("\n");
+    //printf("DMS -> PRELOAD SUMMARY REPORT:\n");
+    //printf("-------------------------------------\n");
     cout << "Lake Shore DMS Volume: ";
     cin >> Lake_Shore.DMS_Volume;
     cout << "Three Rivers DMS Volume: ";
     cin >> Three_Rivers.DMS_Volume;
-    //Given from Enterprise Scan Reports
-    printf("\n");
-    printf("IGATE -> ENTERPRISE SCAN REPORTS:\n");
-    printf("-------------------------------------\n");
-    double SPA_Volume;
-    cout << "SPA Volume: ";
-    cin >> SPA_Volume;
     //Given from PDOP
     printf("\n");
-    printf("PDOP:\n");
-    printf("-------------------------------------\n");
+    //printf("PDOP:\n");
+    //printf("-------------------------------------\n");
     double Sort_Hours;
     cout << "Sort Hours: ";
     cin >> Sort_Hours;
@@ -53,25 +66,24 @@ int main()
     cin >> AM_Hours;
     //Given from PFT Reports -> Forcasted Bulk Reports
     printf("\n");
-    printf("SUBTRACTED BULK:\n");
-    printf("PFT REPORTS -> FORECASTED BULK REPORT\n");
-    printf("-------------------------------------\n");
-    double Target_Volume;
-    cout << "Target Volume: ";
-    cin >> Target_Volume;
-    double DRC_Volume;
-    cout << "DRC Volume: ";
-    cin >> DRC_Volume;
-    double Amazon_Volume;
-    cout << "Amazon Volume: ";
-    cin >> Amazon_Volume;
-    printf("\n");
-    printf("\n");
+    //printf("SUBTRACTED BULK:\n");
+    //printf("PFT REPORTS -> FORECASTED BULK REPORT\n");
+    //printf("-------------------------------------\n");
+    //double Target_Volume;
+    //cout << "Target Volume: ";
+    //cin >> Target_Volume;
+    //double DRC_Volume;
+    //cout << "DRC Volume: ";
+    //cin >> DRC_Volume;
+    //double Amazon_Volume;
+    //cout << "Amazon Volume: ";
+    //cin >> Amazon_Volume;
+    //printf("\n");
+    //printf("\n");
     printf("--------------------------------------------------------------------------\n");
-
     //SPA Volume subtracting Bulk
-    SPA_Volume = SPA_Volume - Target_Volume - DRC_Volume - Amazon_Volume;
-
+    //SPA_Volume = SPA_Volume - Target_Volume - DRC_Volume - Amazon_Volume;
+    
     //PPH
     double PPH = SPA_Volume/(Sort_Hours+AM_Hours);
 
@@ -100,18 +112,18 @@ int main()
     //RESULTS
     printf("\n");
     printf("\n");
-    printf("MAPLE GROVE PRELOAD POST-SORT SUMMARY\n");
+    printf("              RESULTS               \n");
     printf("-------------------------------------\n");
     printf("\n");
     printf("PPH: %.2f\n", PPH);
     printf("\n");
     printf("-------------------------------------\n");
-    printf("\n");
-    printf("FINAL TOTAL VOLUME & HOURS\n");
-    printf("-------------------------------------\n");
-    printf("SPA Volume: %.0f\n", SPA_Volume);
-    printf("Sort Hours: %.2f\n", Sort_Hours);
-    printf("AM Hours: %.2f\n", AM_Hours);
+    //printf("\n");
+    //printf("FINAL TOTAL VOLUME & HOURS\n");
+    //printf("-------------------------------------\n");
+    //printf("SPA Volume: %.0f\n", SPA_Volume);
+    //printf("Sort Hours: %.2f\n", Sort_Hours);
+    //printf("AM Hours: %.2f\n", AM_Hours);
     printf("\n");
     printf("\n");
 
