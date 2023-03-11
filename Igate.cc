@@ -25,16 +25,12 @@ class Maple_Grove_Center
 int main()
 {
     //Given from Preload Summary Report in DMS. 
-    //Click on today's date for Saturday's and Monday will be the higher number of the other two.
     Maple_Grove_Center Lake_Shore;
     Maple_Grove_Center Three_Rivers;
     printf("\n");
     printf("          END OF DAY REPORT          \n");
     printf("-------------------------------------\n");
-    //Given from Enterprise Scan Reports
     printf("\n");
-    //printf("IGATE -> ENTERPRISE SCAN REPORTS:\n");
-    //printf("-------------------------------------\n");
     
     // current date and time on the current system
     time_t now = time(0);
@@ -56,7 +52,6 @@ int main()
     cin >> Three_Rivers.DMS_Volume;
     //Given from PDOP
     printf("\n");
-    //printf("PDOP:\n");
     //printf("-------------------------------------\n");
     double Sort_Hours;
     cout << "Sort Hours: ";
@@ -64,25 +59,8 @@ int main()
     double AM_Hours;
     cout << "AM Hours: ";
     cin >> AM_Hours;
-    //Given from PFT Reports -> Forcasted Bulk Reports
     printf("\n");
-    //printf("SUBTRACTED BULK:\n");
-    //printf("PFT REPORTS -> FORECASTED BULK REPORT\n");
-    //printf("-------------------------------------\n");
-    //double Target_Volume;
-    //cout << "Target Volume: ";
-    //cin >> Target_Volume;
-    //double DRC_Volume;
-    //cout << "DRC Volume: ";
-    //cin >> DRC_Volume;
-    //double Amazon_Volume;
-    //cout << "Amazon Volume: ";
-    //cin >> Amazon_Volume;
-    //printf("\n");
-    //printf("\n");
     printf("--------------------------------------------------------------------------\n");
-    //SPA Volume subtracting Bulk
-    //SPA_Volume = SPA_Volume - Target_Volume - DRC_Volume - Amazon_Volume;
     
     //PPH
     double PPH = SPA_Volume/(Sort_Hours+AM_Hours);
@@ -118,12 +96,6 @@ int main()
     printf("PPH: %.2f\n", PPH);
     printf("\n");
     printf("-------------------------------------\n");
-    //printf("\n");
-    //printf("FINAL TOTAL VOLUME & HOURS\n");
-    //printf("-------------------------------------\n");
-    //printf("SPA Volume: %.0f\n", SPA_Volume);
-    //printf("Sort Hours: %.2f\n", Sort_Hours);
-    //printf("AM Hours: %.2f\n", AM_Hours);
     printf("\n");
     printf("\n");
 
